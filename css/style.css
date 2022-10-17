@@ -1,0 +1,204 @@
+:root{
+    --main-color: #0d9488;
+    --padding: 80px;
+}
+::selection{
+    background-color: var(--main-color);
+    color: #fff;
+}
+a{
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+/* Start Header */
+.logo{
+    width: 60px;
+}
+header .container .btns a{
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+header .container .btns a:first-child:hover{
+    background-color: #0d9488;
+    color: #fff !important;
+}
+header .container .btns a:nth-child(2){
+    background-color: #0d9488;
+}
+header .container .btns div{
+    cursor: pointer;
+}
+header .container ul li a:hover{
+    color: #0d9488 !important;
+}
+header .menu{
+    cursor: pointer;
+}
+@media (min-width: 992px) {
+    header .menu{
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    header .container ul{
+        position: absolute;
+        padding: 20px !important;
+        flex-direction: column;
+        top: 70px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: #fff;
+        z-index: 9999;
+        margin: 0 !important;
+    }
+    header .container ul li{
+        margin-bottom: 10px;
+    }
+    header .container .btns{
+        display: none !important;
+    }
+}
+/* Start Landing */
+.landing{
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    height: calc(100vh - 97px);
+}
+@media (max-width: 991px) {
+    .landing{
+        height: auto;
+    }
+}
+.landing .container h1{
+    font-size: 50px;
+    color: var(--main-color);
+}
+@media (max-width: 991px) {
+    .landing .container h1{
+        font-size: 30px;
+    }
+}
+.landing .container a{
+    background-color: var(--main-color);
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.image{
+    padding-bottom: var(--padding);
+}
+.slider{
+    padding-bottom: var(--padding);
+}
+.slider .box{
+    background-color: #f0fdfa;
+    transition: 1s;
+    z-index: 1;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.slider .box.working{
+    opacity: 1 !important;
+}
+@media (max-width: 767px) {
+    .slider .box{
+        flex-direction: column;
+    }
+}
+.slider .container .slider-container{
+    height: 300px
+}
+.slider .container .slider-container .slider-control{
+    position: absolute;
+    bottom: -140px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+@media (max-width: 991px) {
+    .slider .container .slider-container .slider-control{
+        bottom: 285px;
+    }
+}
+.slider .container .slider-container .slider-control i{
+    background-color: var(--main-color);
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.slider .container .slider-container .slider-control .next.disabled,
+.slider .container .slider-container .slider-control .prev.disabled{
+    background-color: #0d94887d;
+    cursor: no-drop;
+}
+/* Start Footer */
+footer{
+    margin-top: 50px;
+    padding-top: var(--padding);
+    padding-bottom: calc(var(--padding) / 2);
+    background-color: #0f172a;
+}
+footer .icons li{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+footer .mail{
+    background-color: #334d74;
+}
+footer a{
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+footer a:hover{
+    color: var(--main-color) !important;
+}
+.active{
+    display: none !important;
+}
+@media (min-width: 992px) {
+    .active{
+        display: flex !important;
+    }
+}
